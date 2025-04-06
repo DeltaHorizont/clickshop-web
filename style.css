@@ -1,0 +1,292 @@
+/* --- Reset Básico y Configuración Global --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  overflow: hidden; /* Evita barras de scroll */
+}
+
+/* --- Fondo Dinámico --- */
+body {
+  background: linear-gradient(-45deg, #ff7e5f, #feb47b, #ff7e5f, #feb47b);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  position: relative; /* Para posicionar elementos hijos absolutamente */
+  transition: background-color 0.6s ease; /* Para el efecto de atenuación */
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Clase para atenuar el fondo */
+body.dimmed::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+body.dimmed.active::after {
+  opacity: 1;
+}
+
+
+/* --- Imágenes de Producto Flotantes --- */
+.product-spot {
+  position: absolute;
+  /* Tamaño aumentado */
+  width: clamp(120px, 22vw, 220px);
+  height: clamp(120px, 22vw, 220px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out, background-color 0.8s ease, box-shadow 0.8s ease;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Estilo para el recuadro y fondo interno */
+  padding: 8px;
+  border-radius: 10px;
+  /* Fondo naranja fuerte semi-transparente (ajusta el color/opacidad si prefieres) */
+  background-color: rgba(255, 126, 95, 0.75); /* Opción 1: Naranja del gradiente más opaco */
+  /* background-color: rgba(255, 140, 0, 0.75); */ /* Opción 2: DarkOrange semi-transparente */
+  /* Sombra blanca exterior como marco */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.product-spot img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  /* Opcional: Sombra en la imagen si tiene transparencia */
+  /* filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); */
+}
+
+/* Posiciones específicas (ajustadas ligeramente para el nuevo tamaño) */
+.spot-1 { top: 8%; left: 5%; }
+.spot-2 { top: 15%; right: 8%; }
+.spot-3 { bottom: 10%; left: 10%; }
+.spot-4 { bottom: 20%; right: 5%; }
+
+/* Clase para mostrar la imagen activa */
+.product-spot.active {
+  opacity: 0.85; /* Opacidad general del spot activo */
+  visibility: visible;
+}
+
+
+/* --- Contenido Central --- */
+#central-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  color: white;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Flecha Animada --- */
+.arrow {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* --- Contenedor del Botón --- */
+.button-container {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+/* --- Botón Principal (Estado Inicial) --- */
+#enter-shop-button {
+  padding: 15px 30px;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+              transform 0.6s ease-in-out,
+              box-shadow 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+              0 0 10px rgba(255, 255, 255, 0.4),
+              0 0 15px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.button-text {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+#enter-shop-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background-color: #007bff;
+  z-index: -1;
+  transition: width 0.4s ease;
+  border-radius: inherit;
+}
+
+#enter-shop-button:hover::before {
+  width: 100%;
+  left: 0;
+  transform: translateX(0);
+}
+
+#enter-shop-button:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+              0 0 20px rgba(255, 255, 255, 0.6),
+              0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* --- Estado de Carga del Botón --- */
+#enter-shop-button.loading {
+  width: clamp(250px, 60vw, 350px);
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #F5F5DC;
+  border: 1px solid #DCDCDC;
+  transform: translateY(-80px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  cursor: default;
+  pointer-events: none;
+}
+
+#enter-shop-button.loading .button-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* --- Barra de Progreso --- */
+#progress-bar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease 0.5s, visibility 0.3s ease 0.5s;
+}
+
+#enter-shop-button.loading #progress-bar-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #10B981;
+  border-radius: 50px;
+  transition: width 2.5s linear;
+}
+
+#progress-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-weight: bold;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.5s;
+}
+
+#enter-shop-button.loading #progress-percentage {
+  opacity: 1;
+}
+
+/* --- Texto de Estado de Carga --- */
+#loading-status-text {
+  position: absolute;
+  bottom: calc(50vh - 120px);
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease 0.3s, visibility 0.5s ease 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+
+#loading-status-text.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 600px) {
+  .product-spot {
+       width: clamp(100px, 20vw, 150px);
+       height: clamp(100px, 20vw, 150px);
+       padding: 6px;
+       border-radius: 8px;
+  }
+  /* Ajustar posiciones en móvil */
+  .spot-1 { top: 5%; left: 3%; }
+  .spot-2 { top: 8%; right: 5%; }
+  .spot-3 { bottom: 5%; left: 5%; }
+  .spot-4 { bottom: 10%; right: 3%; }
+
+  h1 { font-size: 1.8rem; }
+  #enter-shop-button { padding: 12px 25px; }
+  #enter-shop-button.loading {
+      width: 220px;
+      transform: translateY(-60px) scale(1.03);
+  }
+  #loading-status-text {
+      bottom: calc(50vh - 100px);
+      font-size: 1rem;
+  }
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickShop - Tienda</title>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="shop-style.css">
+    <link rel="icon" type="image/x-icon" href="productos-tienda/images-removebg-preview (2).ico">
+    <!-- Fin de línea para favicon -->
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-container"> <a href="tienda.html"> <img src="productos-tienda/logo web.png" alt="Logo ClickShop" class="logo-img"> </a> </div>
+            <div class="clock-container"> <span id="time">--:--:--</span> <span id="date">-- ---- ----</span> </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="tienda.html">Inicio</a></li>
+                    <li><a href="#celulares">celulares</a></li>
+                    <li><a href="#relojes">Relojes</a></li>
+                    <li><a href="#varios">Varios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <!-- === REVERTIDO: Enlace normal a Más Info === -->
+                    <li><a href="#mas-info">Más Info</a></li>
+                    <!-- ========================================= -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="shop-content">
+
+        <!-- === Carrusel Swiper === -->
+        <div class="carousel-section">
+            <h3>Novedades</h3>
+            <div class="swiper product-carousel">
+                 <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="productos-tienda/banner reloj.jpg" alt="Producto Destacado 1" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="productos-tienda/banner celular.jpg" alt="Producto Destacado 2" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="productos-tienda/banner auriculares.jpg" alt="Producto Destacado 3" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="productos-tienda/banner gamer.png" alt="Producto Destacado 4" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="productos-tienda/banner msi.jpg" alt="Producto Destacado 5" loading="lazy"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- === Fin Carrusel Swiper === -->
+
+        <!-- === Sección Celulares === -->
+        <section id="celulares">
+            <h3>CELULARES</h3>
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <img src="productos-tienda/celular samsung.png" alt="Celular Samsung" loading="lazy">
+                    <h4>Celular Samsung</h4>
+                    <p class="product-description">El Galaxy A55 cuenta con una pantalla Super AMOLED de 6.6 pulgadas y tasa de refresco de 120 Hz, ofreciendo colores vibrantes y fluidez. Incluye una cámara principal de 50 MP para capturar fotos nítidas, junto con una batería de 5000 mAh que dura todo el día y carga rápida de 25W. Equipado con un procesador Exynos 1380 y 6GB/8GB de RAM, es ideal para multitareas y juegos moderados. Ofrece 128GB de almacenamiento expandible y un diseño elegante con resistencia a salpicaduras. Es una opción equilibrada para quienes buscan rendimiento confiable y funciones premium en un rango accesible.</p>
+                    <p class="product-price">$100</p>
+                    <!-- Botón WhatsApp Producto -->
+                    <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20el%20Celular%20Samsung."
+                       target="_blank" rel="noopener noreferrer" class="product-whatsapp-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        <span>Consultar Detalles</span> <!-- Texto cambiado -->
+                    </a>
+                </div>
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img src="productos-tienda/celular readmi note 13.png" alt="Celular Redmi Note 13" loading="lazy">
+                    <h4>Celular Redmi Note 13</h4>
+                    <p class="product-description">El Redmi Note 13 tiene una pantalla AMOLED de 6.67 pulgadas con tasa de refresco de 120 Hz, ideal para ver contenido y navegar. Cuenta con una cámara principal de 108 MP para fotos nítidas y una batería de 5000 mAh que dura todo el día con carga rápida de 33W. Equipado con un procesador MediaTek Helio G99 y 6GB/8GB de RAM, es perfecto para multitareas y juegos ligeros. Ofrece 128GB/256GB de almacenamiento expandible y un diseño moderno con sensor de huellas lateral. Es una opción versátil y confiable para usuarios que buscan calidad y rendimiento a buen precio.</p>
+                    <p class="product-price">$150</p>
+                     <!-- Botón WhatsApp Producto -->
+                    <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20el%20Celular%20Redmi%20Note%2013."
+                       target="_blank" rel="noopener noreferrer" class="product-whatsapp-button">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                         <span>Consultar Detalles</span>
+                    </a>
+                </div>
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <img src="productos-tienda/celular motorola moto g24.png" alt="Motorola G24" loading="lazy">
+                    <h4>Motorola G24</h4>
+                    <p class="product-description">El Motorola Moto G24 viene con una pantalla de 6.5 pulgadas y tasa de refresco de 90 Hz, ideal para uso diario. Tiene una cámara principal de 50 MP para fotos claras, una batería de 5000 mAh que dura todo el día y carga rápida de 15W. Con un procesador MediaTek Helio G85 y 4GB/6GB de RAM, es perfecto para tareas cotidianas, navegar redes sociales y juegos ligeros. Ofrece 128GB de almacenamiento expandible, diseño moderno y sensor de huellas lateral. Es una opción equilibrada para usuarios que buscan rendimiento confiable a buen precio.</p>
+                    <p class="product-price">$100</p>
+                     <!-- Botón WhatsApp Producto -->
+                    <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20el%20Motorola%20G24."
+                       target="_blank" rel="noopener noreferrer" class="product-whatsapp-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        <span>Consultar Detalles</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- === Fin Sección Celulares === -->
+
+        <!-- === Sección Relojes === -->
+        <section id="relojes">
+             <h3>RELOJES</h3>
+             <div class="product-grid">
+                <!-- Producto Nuevo 1 -->
+                <div class="product-card">
+                    <img src="productos-tienda/reloj 3.png" alt="Reloj Inteligente Samsung" loading="lazy">
+                    <h4>galaxy Fit3</h4>
+                    <p class="product-description">El Galaxy Fit3 de Samsung es una pulsera ligera y compacta con una pantalla AMOLED de 1.47 pulgadas, ideal para ver notificaciones y datos de forma clara. Ofrece monitoreo de salud básico, como frecuencia cardíaca, sueño y seguimiento de pasos, además de modos deportivos para actividades como caminar, correr o nadar, con resistencia al agua hasta 50 metros. Incluye funciones prácticas como recordatorios de inactividad, control de música y notificaciones de llamadas y mensajes. Su batería dura hasta 10 días con uso normal, y su diseño delgado y cómodo lo hace perfecto para usar todo el día. Es una opción simple y accesible para quienes buscan un rastreador básico para su rutina diaria.</p>
+                    <p class="product-price">$150</p>
+                    <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20el%20Reloj%20Inteligente%20Samsung."
+                       target="_blank" rel="noopener noreferrer" class="product-whatsapp-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        <span>Consultar Detalles</span>
+                    </a>
+                </div>
+                <!-- Producto Nuevo 2 -->
+                <div class="product-card">
+                    <img src="productos-tienda/reloj 2.png" alt="Reloj militar" loading="lazy">
+                    <h4>MotoWatch 100</h4>
+                    <p class="product-description">El MotoWatch 100 de Motorola es un reloj inteligente básico con una pantalla circular LCD de 1.69 pulgadas, ideal para ver notificaciones y datos esenciales. Ofrece funciones de monitoreo de salud como seguimiento de pasos, frecuencia cardíaca y monitoreo del sueño, además de modos deportivos para actividades como caminar o correr. Es resistente al agua hasta 50 metros, lo que lo hace apto para usar mientras nadas o bajo la lluvia. Incluye características prácticas como recordatorios de inactividad, cronómetro y control de música, con una batería que dura hasta 7 días con uso normal. Su diseño clásico y cómodo lo convierte en una opción accesible para quienes buscan un smartwatch sencillo y funcional para su día a día.</p>
+                    <p class="product-price">$67.89</p>
+                     <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20el%20Reloj%20militar."
+                       target="_blank" rel="noopener noreferrer" class="product-whatsapp-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                         <span>Consultar Detalles</span>
+                    </a>
+                </div>
+                <!-- Producto Nuevo 3 -->
+                <div class="product-card">
+                    <img src="productos-tienda/reloj 1.png" alt="Reloj Inteligente Xiaomi" loading="lazy">
+                    <h4>Smart Band 9 pro</h4>
+                    <p class="product-description">El Smart Band 9 Pro de Xiaomi destaca por su pantalla AMOLED de 1.62 pulgadas, más grande y brillante, ideal para ver notificaciones y datos con claridad. Ofrece monitoreo avanzado de salud, como frecuencia cardíaca, SpO2 (oxígeno en sangre), sueño profundo y estrés, además de modos deportivos para diversas actividades. Es resistente al agua hasta 50 metros, perfecto para nadar o usar bajo la lluvia. Incluye funciones prácticas como control de música, notificaciones de llamadas y mensajes, y una batería de larga duración de hasta 14 días con uso normal. Su diseño elegante y ligero lo hace cómodo para usar todo el día, convirtiéndolo en una opción versátil para quienes buscan un rastreador de actividad completo y moderno.</p>
+                    <p class="product-price">$199.00</p>
+                     <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20el%20Reloj%20Inteligente%20Xiaomi."
+                       target="_blank" rel="noopener noreferrer" class="product-whatsapp-button">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        <span>Consultar Detalles</span>
+                    </a>
+                </div>
+             </div>
+        </section>
+        <!-- === Fin Sección Relojes === -->
+
+        <!-- === Sección Productos Varios === -->
+        <section id="varios">
+            <h3>PRODUCTOS VARIOS</h3>
+            <div class="product-grid">
+                <!-- Producto Varios 1 -->
+                <div class="product-card">
+                    <img src="productos-tienda/microondas.png" alt="Microondas Inteligente Samsung" loading="lazy">
+                    <h4>Microondas Inteligente Samsung</h4>
+                    <p class="product-description">El Microondas Samsung MW4000D es un electrodoméstico práctico y eficiente, ideal para calentar, descongelar y preparar alimentos rápidamente. Cuenta con una capacidad de 20 litros, perfecta para uso personal o familiar, y una potencia de 700W que garantiza un rendimiento confiable. Incluye funciones como descongelado automático por peso y tiempo, además de un menú preconfigurado para recalentar y cocinar comidas comunes de manera fácil. Su diseño compacto y moderno, con puerta frontal sin marco, lo hace fácil de integrar en cualquier cocina. La cubierta interior de cerámica enamel facilita la limpieza y es resistente a rayaduras. Es una opción accesible y funcional para quienes buscan simplicidad y eficiencia en su día a día.</p>
+                    <p class="product-price">$123.45</p>
+                     <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20el%20Microondas%20Inteligente%20Samsung."
+                       target="_blank" rel="noopener noreferrer" class="product-whatsapp-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        <span>Consultar Detalles</span>
+                    </a>
+                </div>
+                <!-- Producto Varios 2 -->
+                <div class="product-card">
+                    <img src="productos-tienda/cafetera.png" alt="Cafetera Inteligente Xiaomi" loading="lazy">
+                    <h4>Cafetera Inteligente Xiaomi</h4>
+                    <p class="product-description">La Sevenyme Coffee Maker de Xiaomi es una cafetera compacta y moderna diseñada para preparar café de calidad directamente en casa. Ofrece un sistema de extracción de alta precisión que garantiza un espresso con buen cuerpo y aroma, ideal para los amantes del café. Permite ajustar la cantidad de agua y tiempo de extracción según el tipo de café deseado, ya sea espresso o café largo. Incluye un diseño elegante y minimalista, con una estructura fácil de limpiar y compatible con cápsulas estándar o café molido. Es una opción práctica y versátil para quienes buscan una cafetera funcional con un toque de tecnología a un precio accesible.</p>
+                    <p class="product-price">$100</p>
+                     <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20la%20Cafetera%20Inteligente%20Xiaomi."
+                       target="_blank" rel="noopener noreferrer" class="product-whatsapp-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        <span>Consultar Detalles</span>
+                    </a>
+                </div>
+                <!-- Producto Varios 3 -->
+                <div class="product-card">
+                    <img src="productos-tienda/zapatillas.png" alt="Zapatillas Inteligente Nike" loading="lazy">
+                    <h4>Zapatillas Inteligente Nike</h4>
+                    <p class="product-description">Las Nike Adapt BB son zapatillas inteligentes diseñadas para ofrecer comodidad y ajuste personalizado. Cuentan con un sistema de cordones automáticos que se ajustan mediante un motor integrado, permitiendo un calce perfecto con solo presionar un botón o usando una app en tu smartphone. Tienen una unidad Nike FitAdapt que garantiza soporte y adaptabilidad ideal para deportes como baloncesto o actividades intensas. Además, incluyen iluminación LED personalizable en la suela, batería recargable con duración de hasta 14 días y compatibilidad con aplicaciones para controlar el ajuste y monitorear el rendimiento. Son una opción innovadora y futurista para atletas y entusiastas que buscan tecnología de punta en sus zapatos.</p>
+                    <p class="product-price">$200</p>
+                    <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20las%20Zapatillas%20Inteligente%20Nike."
+                       target="_blank" rel="noopener noreferrer" class="product-whatsapp-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        <span>Consultar Detalles</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- === Fin Sección Productos Varios === -->
+
+        <!-- === Sección Contacto === -->
+        <section id="contacto">
+             <h3>Contacto</h3>
+             <!-- ... (Contenido de contacto sin cambios) ... -->
+               <div class="contact-container">
+                 <div class="contact-social"> <h4>Síguenos / Contáctanos</h4> <p>Conéctate con nosotros a través de nuestras redes o envíanos un mensaje directo:</p> <div class="social-links"> <a href="TU_ENLACE_DE_FACEBOOK_AQUI" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="facebook-title"><title id="facebook-title">Facebook Logo</title><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V320H134.4V256h59.8V202.6c0-59.1 35.4-91.7 89-91.7 25.3 0 50.1 4.5 50.1 4.5v55.6H300.4c-28.7 0-37.9 17.2-37.9 36.4V256h64.1l-9.8 64H262.5V504.5C376 496.5 512 376 512 256z"/></svg> <span>Facebook</span></a> <a href="https://wa.me/TUNUMEROCONCODIGOPAIS" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="img" aria-labelledby="whatsapp-title"><title id="whatsapp-title">WhatsApp Logo</title><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg> <span>WhatsApp</span></a> <a href="mailto:tu_correo@ejemplo.com" aria-label="Envíanos un correo"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="email-title"><title id="email-title">Email Icon</title><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zM0 112V108c0-12 6.9-23.1 17.6-28.5l214.4-107.2c10.9-5.4 23.9-5.4 34.8 0l214.4 107.2c10.7 5.4 17.6 16.5 17.6 28.5v4c-1.1 1.7-2.5 3.2-4.2 4.5L270.7 256.1c-5.8 3.8-12.7 5.9-19.8 5.9s-14-2.1-19.8-5.9L4.2 116.5c-1.7-1.3-3.1-2.8-4.2-4.5zM48 400V198.4l190.4 126.9c13.9 9.3 31.7 9.3 45.6 0L464 198.4V400H48z"/></svg> <span>Email</span></a> <a href="TU_ENLACE_DE_LINKEDIN_AQUI" target="_blank" rel="noopener noreferrer" aria-label="Conecta en LinkedIn"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="img" aria-labelledby="linkedin-title"><title id="linkedin-title">LinkedIn Logo</title><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg> <span>LinkedIn</span></a> </div> </div>
+                 <div class="contact-form-container"> <h4>Envíanos un Mensaje</h4> <form id="contact-form"> <div class="form-group"> <label for="from_name">Nombre:</label> <input type="text" id="from_name" name="from_name" required> </div> <div class="form-group"> <label for="from_email">Correo Electrónico:</label> <input type="email" id="from_email" name="from_email" required> </div> <div class="form-group"> <label for="message">Mensaje:</label> <textarea id="message" name="message" rows="5" required></textarea> </div> <button type="submit" class="form-button">Enviar Mensaje</button> <div id="form-message" style="margin-top: 15px; display: none;"></div> </form> </div>
+             </div>
+        </section>
+        <!-- === Fin Sección Contacto === -->
+
+        <!-- === INICIO: Sección Más Información RESTAURADA === -->
+        <section id="mas-info">
+            <h3>Más Información</h3>
+            <div class="info-content">
+                <!-- Bloque Quiénes Somos -->
+                <article class="info-block">
+                    <h4>Sobre ClickShop</h4>
+                    <p>
+                        En ClickShop, nos apasiona ofrecerte la última tecnología y los productos más innovadores del mercado. Nacimos con la misión de facilitar tus compras online, brindándote una experiencia segura, rápida y satisfactoria. Creemos en la calidad, el buen servicio al cliente y en construir una comunidad con nuestros usuarios. ¡Explora nuestro catálogo y descubre todo lo que tenemos para ti!
+                    </p>
+                </article>
+                <!-- Bloque Política de Envíos -->
+                <article class="info-block">
+                    <h4>Nuestros Envíos</h4>
+                    <p>
+                        Entendemos la importancia de recibir tus productos a tiempo y en perfectas condiciones. Por eso, colaboramos con los mejores servicios de logística para asegurar que tus pedidos lleguen a tu puerta en el menor tiempo posible. Todos los envíos son cuidadosamente empaquetados y puedes realizar el seguimiento en tiempo real. Consulta nuestras políticas detalladas para conocer tiempos estimados y costos según tu zona.
+                        <!-- <a href="/politica-envios">Ver Política de Envíos Completa</a> -->
+                    </p>
+                </article>
+                <!-- Bloque Devoluciones y Garantías -->
+                <article class="info-block">
+                    <h4>Devoluciones y Garantías</h4>
+                    <p>
+                        Tu satisfacción es nuestra prioridad. Si por alguna razón no estás completamente satisfecho con tu compra, ofrecemos un proceso de devolución sencillo dentro de los primeros [10] días tras la recepción del producto. Asegúrate de que el producto cumpla con las condiciones especificadas en nuestra política. Todos nuestros productos cuentan además con la garantía oficial del fabricante.
+                        <!-- <a href="/politica-devoluciones">Leer Política de Devoluciones</a> -->
+                    </p>
+                </article>
+                <!-- Bloque Preguntas Frecuentes -->
+                 <article class="info-block">
+                    <h4>Preguntas Frecuentes (FAQ)</h4>
+                    <p>Hemos recopilado algunas de las dudas más comunes de nuestros clientes:</p>
+                    <ul>
+                        <li>¿Cómo puedo realizar un pedido?</li>
+                        <li>¿Qué métodos de pago aceptan?</li>
+                        <li>¿Es seguro comprar en ClickShop?</li>
+                        <li>¿Cómo puedo hacer seguimiento de mi envío?</li>
+                        <li>¿Qué hago si mi producto llega dañado?</li>
+                    </ul>
+                    <p>
+                         Si no encuentras respuesta a tu pregunta aquí, no dudes en <a href="#contacto">contactarnos</a>.
+                    </p>
+                </article>
+            </div> <!-- Fin de .info-content -->
+        </section>
+        <!-- === FIN: Sección Más Información === -->
+
+    </main>
+
+    <!-- SwiperJS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Tu Script Personalizado -->
+    <script src="shop-script.js"></script>
+</body>
+</html>
